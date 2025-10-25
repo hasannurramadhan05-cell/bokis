@@ -7,7 +7,7 @@
 
 :root {
     /* Definisi variabel warna untuk kemudahan perubahan */
-    --primary-color: #3498db;     /* Biru terang */
+    --primary-color: #41474b;     /* Biru terang */
     --secondary-color: #2c3e50;   /* Biru tua/hampir hitam */
     --accent-color: #e74c3c;      /* Merah aksen */
     --light-bg: #ecf0f1;          /* Latar belakang terang */
@@ -33,7 +33,7 @@ body {
 
 /* Terapkan gradasi pada elemen utama (bisa body atau main, tergantung kebutuhan) */
 #beranda { /* Mengaplikasikannya ke Hero Section agar tampil mencolok */
-    background: linear-gradient(-45deg, #37f687, #3caffc, #d87efc, #fa5846);
+    background: linear-gradient(-45deg, #9ac8ad, #abddff, #c6a5d3, #e2a19a);
     background-size: 400% 400%; /* Membuat gradasi sangat besar */
     animation: movingGradient 14s ease infinite; /* Animasi berulang selama 15 detik */
     color: var(--light-text);
