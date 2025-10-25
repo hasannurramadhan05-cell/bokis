@@ -1,4 +1,4 @@
-/* --- 1. RESET DAN FONT PROFESIONAL --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +6,11 @@
 }
 
 :root {
-    /* Definisi variabel warna untuk kemudahan perubahan */
-    --primary-color: #41474b;     /* Biru terang */
-    --secondary-color: #2c3e50;   /* Biru tua/hampir hitam */
-    --accent-color: #e74c3c;      /* Merah aksen */
-    --light-bg: #ecf0f1;          /* Latar belakang terang */
+   
+    --primary-color: #41474b;     
+    --secondary-color: #2c3e50; 
+    --accent-color: #e74c3c;    
+    --light-bg: #ecf0f1;          
     --dark-text: #2c3e50;
     --light-text: #ffffff;
 }
@@ -19,49 +19,48 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--dark-text);
-    min-height: 100vh; /* Memastikan body mencakup seluruh viewport */
+    min-height: 100vh; 
 }
 
-/* --- 2. ANIMASI LATAR BELAKANG GRADASI DINAMIS --- */
 
-/* Keyframes mendefinisikan tahapan animasi */
+
+
 @keyframes movingGradient {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Terapkan gradasi pada elemen utama (bisa body atau main, tergantung kebutuhan) */
-#beranda { /* Mengaplikasikannya ke Hero Section agar tampil mencolok */
+
+#beranda { 
     background: linear-gradient(-45deg, #9ac8ad, #abddff, #c6a5d3, #e2a19a);
-    background-size: 400% 400%; /* Membuat gradasi sangat besar */
-    animation: movingGradient 14s ease infinite; /* Animasi berulang selama 15 detik */
+    background-size: 400% 400%; 
+    animation: movingGradient 14s ease infinite; 
     color: var(--light-text);
     text-align: center;
     padding: 150px 20px;
-    border-radius: 0; /* Menghapus border-radius dari CSS sebelumnya */
+    border-radius: 0; 
 }
 
-/* Pastikan teks di hero section tetap terbaca */
+
 #beranda h2, #beranda p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* --- FIX: Pastikan tombol tidak menutupi teks di hero/banner --- */
-/* Tempatkan teks dan tombol pada flow normal, beri jarak dan stacking yang jelas */
+
 #beranda h2, #beranda p {
-    position: relative; /* buat konteks z-index */
-    z-index: 2; /* teks di atas tombol */
+    position: relative; 
+    z-index: 2; 
 }
 
 #beranda .btn {
-    position: relative !important; /* override positioning jika ada aturan lain */
+    position: relative !important; 
     display: inline-block;
-    margin-top: 24px; /* beri jarak dari teks sehingga tidak menutupnya */
-    z-index: 1; /* tombol berada di bawah teks */
+    margin-top: 24px; 
+    z-index: 1; 
 }
 
-/* Hero inner wrapper to center image + text */
+
 .hero-inner {
     display: flex;
     flex-direction: column;
@@ -69,7 +68,7 @@ body {
     gap: 18px;
 }
 
-/* Hero profile image */
+
 .hero-img {
     width: 140px;
     height: 140px;
@@ -79,10 +78,10 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-/* --- 3. HEADER DAN NAVIGASI STYLING --- */
+
 
 header {
-    background-color: rgba(100, 109, 118, 0.95); /* Sedikit transparan untuk efek modern */
+    background-color: rgba(100, 109, 118, 0.95); 
     color: var(--light-text);
     padding: 1rem 4rem;
     display: flex;
@@ -116,7 +115,7 @@ nav ul li a:hover {
     border-bottom: 2px solid var(--primary-color);
 }
 
-/* --- 4. TATA LETAK UTAMA DAN SEKSI --- */
+
 
 main {
     max-width: 1280px;
@@ -131,7 +130,7 @@ section {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-section:nth-child(even) { /* Latar belakang yang berbeda untuk seksi genap */
+section:nth-child(even) { 
     background-color: var(--light-text);
 }
 
@@ -146,17 +145,17 @@ section h2 {
     width: auto;
     margin-left: auto;
     margin-right: auto;
-    display: block; /* Agar dapat menggunakan margin auto */
+    display: block; 
 }
 
-/* --- 5. STYLING ELEMEN LAIN --- */
+
 
 .btn {
     background-color: var(--accent-color);
     color: white;
     padding: 12px 25px;
     text-decoration: none;
-    border-radius: 50px; /* Tombol bulat */
+    border-radius: 50px; 
     font-weight: bold;
     letter-spacing: 1px;
     transition: background-color 0.3s, transform 0.3s;
@@ -164,10 +163,10 @@ section h2 {
 
 .btn:hover {
     background-color: #c0392b;
-    transform: translateY(-3px); /* Efek sedikit terangkat */
+    transform: translateY(-3px); 
 }
 
-/* PORTOFOLIO */
+
 .proyek-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -177,12 +176,12 @@ section h2 {
 .proyek {
     background-color: var(--light-text);
     border-radius: 10px;
-    overflow: hidden; /* Penting agar gambar tidak keluar dari batas */
+    overflow: hidden; 
     box-shadow: 0 6px 20px rgba(226, 128, 128, 0.1);
     transition: transform 0.3s;
 }
 
-/* Gambar proyek: tampilkan sebagai cover di atas kartu */
+
 .proyek img {
     width: 100%;
     height: 180px;
@@ -191,7 +190,7 @@ section h2 {
 }
 
 .proyek:hover {
-    transform: translateY(-10px); /* Efek melayang saat hover */
+    transform: translateY(-10px); 
 }
 
 .proyek h3 {
@@ -218,7 +217,7 @@ section h2 {
     background-color: #0c7577;
 }
 
-/* --- 6. FOOTER --- */
+
 
 footer {
     text-align: center;
@@ -228,7 +227,7 @@ footer {
     margin-top: 20px;
 }
 
-/* --- 7. MEDIA QUERIES (RESPONSIVITAS) --- */
+
 
 @media (max-width: 900px) {
     header {
@@ -257,7 +256,7 @@ footer {
         padding: 80px 20px;
     }
 
-    /* Kurangi jarak tombol pada layar kecil agar layout tetap proporsional */
+   
     #beranda .btn {
         margin-top: 16px;
     }
